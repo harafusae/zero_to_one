@@ -41,14 +41,14 @@ $(function(){
     var winW = $(window).width();
     if(winW <= 779){//SP
 
-      $('.solution-tab').slick({
-        asNavFor: '.spec-area',
-        dots:true
-      });
-      $('.spec-area').slick({
-        arrows: false,
-        swipe:false,
-      });
+      // $('.solution-tab').slick({
+      //   asNavFor: '.spec-area',
+      //   dots:true
+      // });
+      // $('.spec-area').slick({
+      //   arrows: false,
+      //   swipe:false,
+      // });
 
       
 

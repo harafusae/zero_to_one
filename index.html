@@ -8,10 +8,10 @@
   <meta name="description" content="">
   <title>Luci</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="slick.css">
-  <link rel="stylesheet" href="slick-theme.css">
 </head>
 <body>
+
+
 
 <!--headerここから-->
 	<header class="header">
@@ -19,11 +19,11 @@
 			<h1 class="sitelogo"><a href="index.html"><img src="img/common/sitelogo.png" alt=""></a></h1>
 			<ul class="g-nav">
 				<li><a href="whatsnew/index.html">What’s new</a></li>
-				<li><a href="solution/index.html">ソリューション</a></li>
 				<li><a href="products/index.html">プロダクト</a></li>
+				<li><a href="solution/index.html">ソリューション</a></li>
 				<li><a href="download/index.html">ダウンロード</a></li>
-				<li><a href="">私たちについて</a></li>
-				<li><a href="">お問い合わせ</a></li>
+				<li><a href="###">私たちについて</a></li>
+				<li><a href="###">お問い合わせ</a></li>
 			</ul>
 			<div class="luci"><a href=""><img src="img/common/luci.png" alt=""></a></div>
 		</div>
@@ -49,7 +49,7 @@
 	</main>
 
 	<section class="whatsnew sec">
-		<h2 class="sec-ttl"><span>What’s NEW</span></h2>
+		<h2 class="sec-ttl"><b>What’s NEW</b></h2>
 		<div class="whatsnew-list">
 			<a href="###"><dl><dt>2017.05.14</dt><dd>zero to one project サイトを公開いたしました。</dd></dl></a>
 			<a href="###"><dl><dt>2017.05.10</dt><dd>【イベントレポート】Japan Shop 2017へのご来場ありがとうございましたりがとうございました</dd></dl></a>
@@ -58,14 +58,43 @@
 		<a href="###" class="btn btn-more whatsnew-more">一覧</a>
 	</section>
 
+	<section class="products sec">
+		<h2 class="sec-ttl"><b>Products</b><span>新しい驚きを、さまざまな市場で</span></h2>
+		<a href="###" class="btn btn-more products-more">プロダクト一覧</a>
+	</section>
+
 	<section class="solution sec">
-		<h2 class="sec-ttl"><span>Solution</span>私たちのソリューション</h2>
+		<h2 class="sec-ttl"><b>Solution</b><span>私たちのソリューション</span></h2>
 		<div class="solution-inner">
 			<ul class="solution-tab">
-				<li class="active"><img src="img/common/solution_icon01.png"></li>
-				<li><img src="img/common/solution_icon02.png"></li>
-				<li><img src="img/common/solution_icon03.png"></li>
-				<li><img src="img/common/solution_icon04.png"></li>
+				<li class="active">
+					<a href="###">
+						<img src="img/common/solution_icon01.png" class="pc-on">
+						<img src="img/solution/thum_pesticide.png" class="sp-on">
+						<p class="solution-tab-ttl">防虫対策</p>
+					</a>
+				</li>
+				<li>
+					<a href="###">
+						<img src="img/common/solution_icon02.png" class="pc-on">
+						<img src="img/solution/thum_sleep.png" class="sp-on">
+						<p class="solution-tab-ttl">睡眠</p>
+					</a>
+				</li>
+				<li>
+					<a href="###">
+						<img src="img/common/solution_icon03.png" class="pc-on">
+						<img src="img/solution/thum_source.png" class="sp-on">
+						<p class="solution-tab-ttl">高演色性光源</p>
+					</a>
+				</li>
+				<li>
+					<a href="###">
+						<img src="img/common/solution_icon04.png" class="pc-on">
+						<img src="img/solution/thum_vr.png" class="sp-on">
+						<p class="solution-tab-ttl">VR</p>
+					</a>
+				</li>
 			</ul>
 		</div>
 		<div class="spec-area">
@@ -104,13 +133,8 @@
 		</div>
 	</section>
 
-	<section class="products sec">
-		<h2 class="sec-ttl"><span>Products</span>新しい驚きを、さまざまな市場で</h2>
-		<a href="###" class="btn btn-more products-more">プロダクト一覧</a>
-	</section>
-
 	<section class="contents sec">
-		<h2 class="sec-ttl"><span>Contents</span>最近の記事一覧</h2>
+		<h2 class="sec-ttl"><b>Contents</b><span>最近の記事一覧</span></h2>
 		<div class="card-list">
 			<article class="card-article label-solution">
 				<a href="###">
@@ -199,9 +223,8 @@
 				</ul>
 			</article>
 		</div>
-		<div class="btn btn-more contents-more"><a href="###">すべての記事をみる</a></div>
+		<a href="###" class="btn btn-more contents-more">すべての記事をみる</a>
 	</section>
-
 
 
 
@@ -251,7 +274,6 @@
 
 
 <script src="js/vendors/jquery-3.1.1.min.js"></script>
-<script src="js/vendors/slick.min.js"></script>
 <script src="js/app.js"></script>
 <script src="https://apis.google.com/js/platform.js" async defer>
   {lang: 'ja'}

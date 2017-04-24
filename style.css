@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:700');
 @charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -80,10 +80,6 @@ a img{
 a:hover img:not(.ov) {
   opacity: 0.7;
 }
-a:hover{
-  text-decoration: underline;
-}
-
 img {
   vertical-align: middle;
 }
@@ -127,8 +123,12 @@ img {
 .g-nav li:last-child{
   margin-right: 0;
 }
+.g-nav li a{
+  opacity: 1;
+  transition: 0.3s;
+}
 .g-nav li a:hover{
-  text-decoration: underline;
+  opacity: 0.7;
 }
 .g-nav li span{
   color: #777;
@@ -140,7 +140,9 @@ img {
   color: #fff;
   padding: 0 2px;
 }
-
+.g-nav li.current a:hover{
+  opacity: 1;
+}
 
 /*----top-area----*/
 .top-area{
@@ -174,11 +176,14 @@ img {
   line-height: 1.2;
   font-weight: normal;
 }
-.sec-ttl span{
+.sec-ttl b{
   font-size: 48px;
   display: block;
   font-weight: bold;
   letter-spacing: 1px;
+}
+.sec-ttl span{
+  letter-spacing: 1.5px;
 }
 .btn{
   opacity: 1;
@@ -206,8 +211,6 @@ img {
 }
 .whatsnew-list{
   margin-bottom: 10px;
-  max-height: 120px;
-  overflow: scroll;
 }
 .whatsnew-list a{
   display: block;
@@ -258,6 +261,7 @@ img {
 }
 .solution-tab li{
   position: relative;
+  text-align: center;
 }
 .solution-tab li.active:after{
   position: absolute;
@@ -270,6 +274,11 @@ img {
 }
 .solution-tab li:hover{
   cursor: pointer;
+}
+.solution-tab-ttl{
+  color: #5e5c53;
+  font-size: 18px;
+  margin-top: 5px;
 }
 .solution-tab li img{
   opacity: 1;
@@ -398,9 +407,10 @@ img {
   width: 100%;
   height: 100%;
   top: 1px;
-  right: 0;
-  background: url(img/common/list_frame.png) no-repeat;
-  background-size: cover;
+  right: 0; 
+  background: url(img/common/list_frame.svg) no-repeat;
+  background-size: 100% 100%;
+  fill: rgba(0,0,0,0);  /* fill: none; の代わり */
 }
 .card-article-data{
   color: #666666;
@@ -513,11 +523,15 @@ img {
   text-align: center;
   line-height: 1.2;
   font-weight: normal;
+  font-family: 'Noto Sans', sans-serif;
 }
-.categorypage-ttl span{
+.categorypage-ttl b{
   font-size: 48px;
   display: block;
   font-weight: bold;
+}
+.categorypage-ttl span{
+  letter-spacing: 1.5px;
 }
 .low-banner{
   padding: 50px 0;
@@ -600,7 +614,12 @@ img {
   background-color: #ffcc33;
 }
 
-
+.pc-on{
+  display: block;
+}
+.sp-on{
+  display: none;
+}
 
 
 
@@ -728,7 +747,31 @@ img {
     margin-right: 0;
   }
   .g-nav li{
+    position: relative;
     margin-right: 0;
+    background-color: #fff;
+    border-top: 1px solid #e0dace;
+  }
+  .g-nav li:after{
+    content: "";
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 14px;
+    height: 23px;
+    display: block;
+    background: url(img/common/next.png) no-repeat;
+    background-size: cover;
+  }
+  .g-nav li a{
+    display: block;
+    padding: 10px 0 10px 20px;
+  }
+  .g-nav li.current a{
+    padding: 10px 0 10px 20px;
   }
   .contents{
     width: auto;
@@ -756,11 +799,17 @@ img {
   }
 }
 @media screen and (max-width: 779px){
+  .sp-on{
+    display: block;
+  }
+  .pc-on{
+    display: none;
+  }
   .sec-ttl{
     margin-bottom: 15px;
     font-size: 13px;
   }
-  .sec-ttl span{
+  .sec-ttl b{
     font-size: 28px;
   }
   .main-banner{
@@ -794,9 +843,34 @@ img {
   .whatsnew-more{
     float: none;
   }
+  .solution-inner{
+    border-bottom: none;
+  }
   .solution-tab{
     width: auto;
     padding-bottom: 0;
+    overflow: hidden;
+    flex-wrap: wrap;
+    margin: 0 2%;
+  }
+  .solution-tab li{
+    position: relative;
+    width: 49%;
+    margin-bottom: 2%;
+    text-align: center;
+  }
+  .solution-tab li img{
+    width: 100%;
+  }
+  .solution-tab li.active:after{
+    content: none;
+  }
+  .solution-tab-ttl{
+    background: url(img/common/next.png) 97% center no-repeat;
+    background-size: 15px;
+  }
+  .spec-area{
+    display: none;
   }
   .spec{
     width: auto;
@@ -874,8 +948,11 @@ img {
     font-size: 14px;
     margin-bottom: 50px;
   }
-  .categorypage-ttl span{
+  .categorypage-ttl b{
     font-size: 36px;
+  }
+  .categorypage-ttl span{
+    font-size: 14px;
   }
   .low-banner{
     padding: 25px 0;
