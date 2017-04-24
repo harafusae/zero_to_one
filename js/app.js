@@ -43,11 +43,11 @@ $(function(){
 
       $('.solution-tab').slick({
         asNavFor: '.spec-area',
+        dots:true
       });
       $('.spec-area').slick({
         arrows: false,
         swipe:false,
-        dots:true
       });
 
       
