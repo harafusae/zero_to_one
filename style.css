@@ -420,7 +420,7 @@ img {
 }
 .card-article{
   position: relative;
-  width: 263px;
+  width: 24%;
   margin-bottom: 50px;
 }
 .card-article:before{
@@ -493,6 +493,7 @@ img {
 }
 .card-list--col3 .card-article{
   margin-right: 2%;
+  width: 32%;
 }
 .card-list--col3 .card-article:nth-child(3n){
   margin-right: 0;
@@ -1135,6 +1136,7 @@ img {
     margin-right: 0;
   }
   .card-list--col3 .card-article{
+    width: 48%;
     margin-right: 0;
   }
   .sidebar{
