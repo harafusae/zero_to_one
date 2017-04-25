@@ -206,6 +206,11 @@ img {
   margin: 0 auto;
   overflow: hidden;
 }
+.inner-wrap--min{
+  width: 1040px;
+  margin: 0 auto;
+  overflow: hidden;
+}
 .sidebar{
   width: 260px;
   float: left;
@@ -257,6 +262,10 @@ img {
   margin: 0 auto 50px auto;
   overflow: hidden;
 }
+.whatsnew .sec-ttl b{
+  color: #f4a000;
+  font-size: 20px;
+} 
 .whatsnew-list{
   margin-bottom: 10px;
 }
@@ -308,6 +317,7 @@ img {
   padding-bottom: 10px;
 }
 .solution-tab li{
+  width: 165px;
   position: relative;
   text-align: center;
 }
@@ -331,9 +341,15 @@ img {
 .solution-tab li img{
   opacity: 1;
   transition: 0.3s;
+  width: 60%;
+  margin: 0 auto;
 }
 .solution-tab li img:hover{
   opacity: 0.7;
+}
+.solution-tab li a{
+  display: block;
+  margin: 0 auto;
 }
 .spec{
   width: 780px;
@@ -528,15 +544,21 @@ img {
   display: inline-block;
   border: 1px solid #bfbfbf;
   border-radius: 3px;
-  padding: 3px 7px;
+  padding: 4px 7px 3px 7px;
   margin-bottom: 5px;
 }
 .relation-tag-list li a{
+  position: relative;
   display: block;
-  background: url(img/common/icon_tag.png) left 4px no-repeat;
   background-size: 12px;
   padding-left: 17px;
   padding-right: 4px;
+}
+.relation-tag-list li a:before{
+  position: absolute;
+  left: -1px;
+  content: "\f02b";
+  font-family: FontAwesome;
 }
 
 
@@ -617,6 +639,12 @@ img {
 .pankuzu-list li:last-child:after{
   content: none;
 }
+.pankuzu-list li a{
+  text-decoration: underline;
+}
+.pankuzu-list li a:hover{
+  text-decoration: none;
+}
 
 
 
@@ -665,7 +693,115 @@ img {
 }
 
 
-
+/*----detail----*/
+.detail-area{
+  width: 750px;
+  float: left;
+  margin-right: 30px;
+}
+.detail-head{
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #bfbfbf;
+}
+.detail-info{
+  margin-bottom: 10px;
+}
+.detail-label{
+  display: inline-block;
+  margin-right: 5px;
+}
+.detail-data{
+  display: inline-block;
+  color: #666666;
+  font-style: italic;
+}
+.detail-ttl{
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.detail-tag li{
+  margin-right: 5px;
+  padding: 3px 5px;
+  background-color: #ffcc66;
+  font-size: 12px;
+  opacity: 1;
+  transition: 0.3s;
+  display: inline-block;
+}
+.detail-content-img{
+  margin-bottom: 40px;
+}
+.detail-content-img img{
+  width: 100%;
+}
+.mass{
+  margin-bottom: 50px;
+}
+.mass-ttl{
+  margin-bottom: 10px;
+  font-size: 26px;
+  color: #333333;
+}
+.mass-text{
+  font-size: 16px;
+  text-align: justify;
+}
+.detail-relation-tll{
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+.detail-relation a{
+  display: block;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+.detail-relation-list dt{
+  position: relative;
+  float: left;
+  margin-right: 10px;
+}
+.detail-relation-list dt:before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 72px;
+  height: 28px;
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 50;
+}
+.detail-relation-list dt:before{
+  background-image: url(img/common/label_solution.png);
+}
+.detail-relation-list dt:after{
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 1px;
+  right: 0;
+  background: url(img/common/list_frame.svg) no-repeat;
+  background-size: 100% 100%;
+  fill: rgba(0,0,0,0);
+}
+.detail-relation-data{
+  color: #666666;
+  font-style: italic;
+}
+.detail-relation-text{
+  font-size: 18px;
+}
+.detail-relation-text{
+  text-decoration: underline;
+}
+.detail-relation-text:hover{
+  text-decoration: none;
+}
 
 
 
@@ -856,6 +992,8 @@ img {
     top: 53px;
     left: 0;
     margin-right: 0;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
   }
   .g-nav li{
     position: relative;
@@ -1125,7 +1263,53 @@ img {
   }
 
 
+  /*----detail----*/
+  .detail-area{
+    width: auto;
+    float: none;
+    margin: 0 15px 0 15px;
+  }
+  .detail-head{
+    margin-bottom: 20px;
+  }
+  .detail-ttl{
+    font-size: 18px;
+  }
+  .detail-content-img{
+    margin-bottom: 20px;
+  }
+  .mass{
+    margin-bottom: 35px;
+  }
+  .mass-ttl{
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  .mass-text{
+    font-size: 14px;
+    text-align: justify;
+  }
+  .detail-relation-tll{
+    font-size: 16px;
+  }
+  .detail-relation a{
+    margin-bottom: 20px;
+  }
+  .detail-relation-text{
+    font-size: 14px;
+  }
+
+
+
+
+
+
+
+
   .inner-wrap{
+    width: auto;
+  }
+  .inner-wrap--min{
     width: auto;
   }
   .inner-min{

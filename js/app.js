@@ -22,7 +22,7 @@ $(function(){
   $(document).ready(function() {
     var pagetop = $('.pagetop');
     $(window).scroll(function () {
-      if ($(this).scrollTop() > 2000) {
+      if ($(this).scrollTop() > 1000) {
         pagetop.fadeIn();
       } else {
         pagetop.fadeOut();
