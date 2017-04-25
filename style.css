@@ -76,6 +76,8 @@ a {
 a img{
   opacity: 1;
   transition: 0.3s;
+  -webkit-backface-visibility: hidden; /* 追加 */
+  backface-visibility: hidden; /* 追加 */
 }
 a:hover img:not(.ov) {
   opacity: 0.7;
@@ -109,10 +111,15 @@ img {
   padding: 15px 0;
   max-width: 1170px;
   align-items: center;
+  padding-left: 5px;
 }
 
 .sitelogo{
   margin-right: 55px;
+}
+.sitelogo a{
+  width: 200px;
+  display: block;
 }
 .g-nav{
   display: flex;
@@ -434,6 +441,36 @@ img {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+.card-list-ttl{
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.card-list-ttl span{
+  position: relative;
+}
+.card-list-ttl span:before{
+  position: absolute;
+  left: -1.5em;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  content: "ー";
+  color: #999999;
+  font-size: 30px;
+}
+.card-list-ttl span:after{
+  position: absolute;
+  right: -1.5em;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  content: "ー";
+  color: #999999;
+  font-size: 30px;
+}
 .card-article{
   position: relative;
   width: 24%;
@@ -468,10 +505,10 @@ img {
   position: absolute;
   content: "";
   display: block;
-  width: 100%;
+  width: calc(100% + 1%);
   height: 100%;
   top: 1px;
-  right: 0; 
+  right: -2px; 
   background: url(img/common/list_frame.svg) no-repeat;
   background-size: 100% 100%;
   fill: rgba(0,0,0,0);  /* fill: none; の代わり */
@@ -497,6 +534,7 @@ img {
   font-size: 12px;
   opacity: 1;
   transition: 0.3s;
+  margin-bottom: 5px;
   display: inline-block;
 }
 .card-article-tag li:hover{
@@ -553,12 +591,14 @@ img {
   background-size: 12px;
   padding-left: 17px;
   padding-right: 4px;
+  z-index: 20;
 }
 .relation-tag-list li a:before{
   position: absolute;
   left: -1px;
-  content: "\f02b";
   font-family: FontAwesome;
+  content: "\f02b";
+  z-index: 40;
 }
 
 
@@ -972,7 +1012,7 @@ img {
     transform: translateY(-7px) rotate(315deg);
   }
   .h-token{
-    height: 53px;
+    height: 47px;
   }
   .header.up{
     top: 0;
@@ -980,7 +1020,7 @@ img {
   .header-inner{
     width: auto;
     max-width: 100%;
-    padding: 5px;
+    padding: 6px;
   }
   .luci{
     display: none;
@@ -989,7 +1029,7 @@ img {
     display: none;
     position: fixed;
     width: 100%;
-    top: 53px;
+    top: 48px;
     left: 0;
     margin-right: 0;
     height: 100vh;
@@ -1021,6 +1061,19 @@ img {
   }
   .g-nav li.current a{
     padding: 10px 0 10px 20px;
+  }
+  .inner-wrap{
+    width: auto;
+  }
+  .card-list--col3{
+    width: auto;
+    margin-right: 0;
+  }
+  .sidebar{
+    width: auto;
+    margin: 50px 15px 0 15px;
+    margin-top: 50px;
+    float: none;
   }
   .contents{
     width: auto;
@@ -1158,6 +1211,10 @@ img {
     width: 48%;
     margin-right: 0;
   }
+  .card-article-thum:after{
+    width: 101%;
+    right: -1px; 
+  }
   .btn-more{
     width: 80%;
     margin: 0 auto;
@@ -1234,6 +1291,7 @@ img {
 
 
 
+
   /*----solution-page----*/
   .sideways{
     width: auto;
@@ -1267,7 +1325,7 @@ img {
   .detail-area{
     width: auto;
     float: none;
-    margin: 0 15px 0 15px;
+    margin: 0 8px 0 8px;
   }
   .detail-head{
     margin-bottom: 20px;
@@ -1298,6 +1356,9 @@ img {
   .detail-relation-text{
     font-size: 14px;
   }
+  .card-list-ttl{
+    font-size: 16px;
+  }
 
 
 
@@ -1323,12 +1384,7 @@ img {
     width: 48%;
     margin-right: 0;
   }
-  .sidebar{
-    width: auto;
-    margin: 50px 15px 0 15px;
-    margin-top: 50px;
-    float: none;
-  }
+
 
 
 
