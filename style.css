@@ -98,10 +98,10 @@ img {
   z-index: 150;
 }
 .header.up{
-  top: -73px;
+  top: -72px;
 }
 .h-token{
-  height: 73px;
+  height: 72px;
 }
 .header-inner{
   display: flex;
@@ -118,13 +118,13 @@ img {
   margin-right: 55px;
 }
 .sitelogo a{
-  width: 200px;
+  width: 225px;
   display: block;
 }
 .g-nav{
   display: flex;
   font-weight: bold;
-  margin-right: 160px;
+  margin-right: 150px;
 }
 .g-nav li{
   margin-right: 17px;
@@ -403,6 +403,38 @@ img {
 .spec-more:last-child{
   background-color: #ffcc33;
   float: right;
+}
+.solution-icon{
+  position: relative;
+}
+.solution-icon:before{
+  content: "";
+  position: absolute;
+  width: 51%;
+  height: 67%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 100;
+}
+.solution-icon.solution-icon1:before{
+  background-image: url(img/common/solution_icon01_w.svg);
+  width: 49%;
+  height: 66%;
+}
+.solution-icon.solution-icon2:before{
+  background-image: url(img/common/solution_icon02_w.svg);
+}
+.solution-icon.solution-icon3:before{
+  background-image: url(img/common/solution_icon03_w.svg);
+}
+.solution-icon.solution-icon4:before{
+  background-image: url(img/common/solution_icon04_w.svg);
 }
 
 
@@ -1071,7 +1103,7 @@ img {
     display: none;
     position: fixed;
     width: 100%;
-    top: 48px;
+    top: 51px;
     left: 0;
     margin-right: 0;
     height: 100vh;
@@ -1411,7 +1443,9 @@ img {
 
 
 
-
+  .sitelogo a{
+    width: 209px;
+  }
   .inner-wrap{
     width: auto;
   }
@@ -1433,6 +1467,7 @@ img {
     width: 49%;
     margin-right: 0;
   }
+
 
 
 
