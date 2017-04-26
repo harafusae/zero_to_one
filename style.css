@@ -259,6 +259,19 @@ img {
 .al{
   text-align: left;
 }
+.three-col{
+  width: 32%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+.three-col:nth-child(3n){
+  margin-right: 0;
+}
+.dis-flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
 
 
@@ -901,6 +914,35 @@ img {
   background-color: #ffcc33;
 }
 
+
+/*----download----*/
+.download-ttl{
+  background-color: #fbdaa8;
+  font-weight: normal;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+.download-col-inner{
+  padding: 20px 0;
+  text-align: center;
+}
+.download-col{
+  border: 1px solid #bfbfbf;
+}
+.download-thum{
+  margin-bottom: 5px;
+}
+.download-text{
+  text-decoration: underline;
+}
+.download-text:hover{
+  text-decoration: none;
+}
+
+
+
+
+
 .pc-on{
   display: block;
 }
@@ -1098,6 +1140,9 @@ img {
   }
   .footer{
     padding: 30px 0;
+  }
+  .dis-flex{
+    padding: 0 15px;
   }
 }
 @media screen and (max-width: 779px){
@@ -1381,7 +1426,11 @@ img {
     margin-right: 0;
   }
   .card-list--col3 .card-article{
-    width: 48%;
+    width: 49%;
+    margin-right: 0;
+  }
+  .three-col{
+    width: 49%;
     margin-right: 0;
   }
 
