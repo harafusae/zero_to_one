@@ -72,6 +72,7 @@ body {
 a {
   color: #000;
   text-decoration: none;
+  backface-visibility: hidden;
 }
 a img{
   opacity: 1;
@@ -258,6 +259,19 @@ img {
 }
 .al{
   text-align: left;
+}
+.three-col{
+  width: 32%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+.three-col:nth-child(3n){
+  margin-right: 0;
+}
+.dis-flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 
@@ -936,7 +950,7 @@ img {
   background-color: #ffcc33;
 }
 
-<<<<<<< HEAD
+
 
 /*----download----*/
 .download-ttl{
@@ -968,8 +982,7 @@ img {
 
 
 
-=======
->>>>>>> a475a2f65be00445fcadd67e2a189ab6fb537b80
+
 .pc-on{
   display: block;
 }
@@ -1167,6 +1180,9 @@ img {
   }
   .footer{
     padding: 30px 0;
+  }
+  .dis-flex{
+    padding: 0 15px;
   }
 }
 @media screen and (max-width: 779px){
@@ -1451,6 +1467,10 @@ img {
   }
   .card-list--col3 .card-article{
     width: 48%;
+    margin-right: 0;
+  }
+  .three-col{
+    width: 49%;
     margin-right: 0;
   }
 
