@@ -98,10 +98,10 @@ img {
   z-index: 150;
 }
 .header.up{
-  top: -72px;
+  top: -73px;
 }
 .h-token{
-  height: 72px;
+  height: 73px;
 }
 .header-inner{
   display: flex;
@@ -118,13 +118,13 @@ img {
   margin-right: 55px;
 }
 .sitelogo a{
-  width: 225px;
+  width: 200px;
   display: block;
 }
 .g-nav{
   display: flex;
   font-weight: bold;
-  margin-right: 150px;
+  margin-right: 160px;
 }
 .g-nav li{
   margin-right: 17px;
@@ -242,7 +242,7 @@ img {
 }
 .pager a:not(:first-child):not(:last-child):hover{
   background-color: #000;
-  color: #fff;  
+  color: #fff;
 }
 .pager a.current{
   background-color: #000;
@@ -259,19 +259,6 @@ img {
 .al{
   text-align: left;
 }
-.three-col{
-  width: 32%;
-  margin-right: 2%;
-  margin-bottom: 2%;
-}
-.three-col:nth-child(3n){
-  margin-right: 0;
-}
-.dis-flex{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
 
 
 
@@ -285,7 +272,7 @@ img {
 .whatsnew .sec-ttl b{
   color: #f4a000;
   font-size: 20px;
-} 
+}
 .whatsnew-list{
   margin-bottom: 10px;
 }
@@ -404,38 +391,6 @@ img {
   background-color: #ffcc33;
   float: right;
 }
-.solution-icon{
-  position: relative;
-}
-.solution-icon:before{
-  content: "";
-  position: absolute;
-  width: 51%;
-  height: 67%;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  display: block;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 100;
-}
-.solution-icon.solution-icon1:before{
-  background-image: url(img/common/solution_icon01_w.svg);
-  width: 49%;
-  height: 66%;
-}
-.solution-icon.solution-icon2:before{
-  background-image: url(img/common/solution_icon02_w.svg);
-}
-.solution-icon.solution-icon3:before{
-  background-image: url(img/common/solution_icon03_w.svg);
-}
-.solution-icon.solution-icon4:before{
-  background-image: url(img/common/solution_icon04_w.svg);
-}
 
 
 
@@ -460,6 +415,8 @@ img {
   position: absolute;
   top: 72%;
   left: 50%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
@@ -534,10 +491,10 @@ img {
   z-index: 50;
 }
 .card-article.label-solution:before{
-  background-image: url(img/common/label_solution.png); 
+  background-image: url(img/common/label_solution.png);
 }
 .card-article.label-product:before{
-  background-image: url(img/common/label_product.png); 
+  background-image: url(img/common/label_product.png);
 }
 .card-article-thum{
   position: relative;
@@ -553,7 +510,7 @@ img {
   width: calc(100% + 1%);
   height: 100%;
   top: 1px;
-  right: -2px; 
+  right: -2px;
   background: url(img/common/list_frame.svg) no-repeat;
   background-size: 100% 100%;
   fill: rgba(0,0,0,0);  /* fill: none; の代わり */
@@ -565,7 +522,7 @@ img {
 .card-article-text{
   font-size: 16px;
   text-align: justify;
-  overflow: hidden; 
+  overflow: hidden;
   margin-bottom: 10px;
 }
 .card-article-text p{
@@ -620,7 +577,7 @@ img {
 .relation-tag-ttl{
   margin-bottom: 5px;
   font-weight: normal;
-  font-size: 14px;  
+  font-size: 14px;
 }
 .relation-tag-list li{
   position: relative;
@@ -665,7 +622,7 @@ img {
 /*----footer----*/
 .footer{
   padding-top: 50px;
-  padding-bottom: 95px;
+  padding-bottom: 50px;
   border-top: 1px solid #bfbfbf;
 }
 .footer-logo{
@@ -946,6 +903,7 @@ img {
   background-color: #ffcc33;
 }
 
+<<<<<<< HEAD
 
 /*----download----*/
 .download-ttl{
@@ -977,6 +935,8 @@ img {
 
 
 
+=======
+>>>>>>> a475a2f65be00445fcadd67e2a189ab6fb537b80
 .pc-on{
   display: block;
 }
@@ -1105,7 +1065,7 @@ img {
     display: none;
     position: fixed;
     width: 100%;
-    top: 51px;
+    top: 48px;
     left: 0;
     margin-right: 0;
     height: 100vh;
@@ -1174,9 +1134,6 @@ img {
   }
   .footer{
     padding: 30px 0;
-  }
-  .dis-flex{
-    padding: 0 15px;
   }
 }
 @media screen and (max-width: 779px){
@@ -1292,7 +1249,7 @@ img {
   }
   .card-article-thum:after{
     width: 101%;
-    right: -1px; 
+    right: -1px;
   }
   .btn-more{
     width: 80%;
@@ -1445,9 +1402,7 @@ img {
 
 
 
-  .sitelogo a{
-    width: 209px;
-  }
+
   .inner-wrap{
     width: auto;
   }
@@ -1462,23 +1417,12 @@ img {
     margin-right: 0;
   }
   .card-list--col3 .card-article{
-    width: 49%;
+    width: 48%;
     margin-right: 0;
   }
-  .three-col{
-    width: 49%;
-    margin-right: 0;
-  }
-
 
 
 
 
 
 }
-
-
-
-
-
-
