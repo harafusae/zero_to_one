@@ -427,6 +427,38 @@ img {
 .products .sec-ttl{
   color: #fff;
 }
+.solution-icon{
+  position: relative;
+}
+.solution-icon:before{
+  content: "";
+  position: absolute;
+  width: 51%;
+  height: 67%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 100;
+}
+.solution-icon.solution-icon1:before{
+  background-image: url(img/common/solution_icon01_w.svg);
+  width: 49%;
+  height: 66%;
+}
+.solution-icon.solution-icon2:before{
+  background-image: url(img/common/solution_icon02_w.svg);
+}
+.solution-icon.solution-icon3:before{
+  background-image: url(img/common/solution_icon03_w.svg);
+}
+.solution-icon.solution-icon4:before{
+  background-image: url(img/common/solution_icon04_w.svg);
+}
 
 
 
@@ -683,6 +715,7 @@ img {
 }
 .pankuzu-list li a{
   text-decoration: underline;
+  font-weight: bold;
 }
 .pankuzu-list li a:hover{
   text-decoration: none;
