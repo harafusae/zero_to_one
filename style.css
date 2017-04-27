@@ -966,6 +966,8 @@ img {
 }
 .download-text{
   text-decoration: underline;
+  padding: 0 5px;
+  word-break: break-all;
 }
 .download-text:hover{
   text-decoration: none;
